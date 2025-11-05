@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Schemes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="fade-in">
+  <nav class="navbar">
+    <div class="logo">Women Empowerment</div>
+    <ul>
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="schemes.html" class="nav-link active">Schemes</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <h1>Latest Women Empowerment Schemes (2025)</h1>
+    <p>Explore and search for initiatives across India.</p>
+
+    <!-- 🔍 Search + Filter -->
+    <div class="search-filter-container">
+      <input type="text" id="search" placeholder="Search for a scheme..." />
+      <select id="filter">
+        <option value="all">All Categories</option>
+        <option value="education">Education</option>
+        <option value="employment">Employment</option>
+        <option value="entrepreneurship">Entrepreneurship</option>
+        <option value="health">Health</option>
+        <option value="safety">Safety</option>
+        <option value="financial">Financial Aid</option>
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <div id="schemes-container" class="schemes-grid"></div>
+  </main>
+
+  <!-- 🔹 Redirect Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const filterSelect = document.getElementById("filter");
+
+      filterSelect.addEventListener("change", (e) => {
+        const selected = e.target.value;
+
+        switch (selected) {
+          case "education":
+            window.location.href = "education.html";
+            break;
+          case "employment":
+            window.location.href = "employment.html";
+            break;
+          case "entrepreneurship":
+            window.location.href = "entrepreneurship.html";
+            break;
+          case "health":
+            window.location.href = "health.html";
+            break;
+          case "safety":
+            window.location.href = "safety.html";
+            break;
+          case "financial":
+            window.location.href = "financial.html";
+            break;
+          default:
+            window.location.href = "schemes.html";
+        }
+      });
+    });
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
